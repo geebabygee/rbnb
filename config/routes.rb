@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'user_videos/index'
+
+  get 'user_videos/new'
+
+  get 'user_videos/create'
+
+  get 'user_videos/destroy'
+
   get 'likes/new'
 
   get 'likes/create'
@@ -21,4 +29,14 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+ devise_for :users,
+    controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+
+  resources :events, only: [ :index, :show ] do
+    resources :likes, only: [:create, :destroy]
+    resources :videos, only:  [ :index, :show, :new, :create, :destroy]
+    resources :user_videos, only: [ :index, :new, :create, :destroy]
+  end
+
 end
