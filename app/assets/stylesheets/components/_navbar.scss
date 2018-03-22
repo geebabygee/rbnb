@@ -7,11 +7,24 @@
   padding: 0px 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   position: fixed;
   bottom: 0;
   width: 100%;
 }
+
+
+
+.navbar-wagon-item {
+  color: white;
+  font-size: 30px;
+}
+
+.navbar-wagon-item:hover {
+  text-decoration: none;
+  color: #8338EC;
+}
+
 
 
 
