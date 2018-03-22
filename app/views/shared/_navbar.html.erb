@@ -1,7 +1,17 @@
 <div class="navbar-wagon">
-  <div class="navbar-wagon-items">
-    <a href="" class="navbar-wagon-item">Map</a>
-    <a href="" class="navbar-wagon-item">Upload</a>
-    <a href="" class="navbar-wagon-item">Profile</a>
+  <div class="navbar-wagon-map">
+    <%= link_to events_index_path, class: "navbar-wagon-item" do %>
+      <i class="far fa-map"></i>
+    <% end %>
+  </div>
+  <div class="navbar-wagon-upload">
+    <%= link_to user_videos_new_path, class: "navbar-wagon-item" do %>
+      <i class="far fa-stop-circle"></i>
+    <% end %>
+  </div>
+  <div class="navbar-wagon-profile">
+    <%= link_to user_videos_new_path, class: "navbar-wagon-item" do %>
+      <i class="fas fa-user"></i>
+    <% end %>
   </div>
 </div>
