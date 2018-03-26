@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'user_videos/index'
 
   get 'user_videos/new'
