@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
+  authenticated :user do
+    root 'events#index', as: :authenticated_root
+  end
   get 'user_videos/index'
 
   get 'user_videos/new'
