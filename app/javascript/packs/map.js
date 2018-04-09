@@ -15,8 +15,9 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
   }
 }
 
-const styles = [
-        [
+
+
+const styles = [ [
     {
         "featureType": "all",
         "elementType": "labels.text.fill",
@@ -182,8 +183,7 @@ const styles = [
             }
         ]
     }
-]
-];
+] ];
 
 map.addStyle({
   styles: styles,
