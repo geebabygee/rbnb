@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   authenticated :user do
     root to: 'events#index', as: :authenticated_root
   end
+
   devise_for :users
   get 'user_videos/index'
 
