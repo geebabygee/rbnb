@@ -10,8 +10,8 @@
   </li>
 
 
-
-  <h2 style="text-align: center; color: white; margin-top: 150px">Sign<span style="color: #8332AC;">Up</span></h2>
+<div class="wrapper">
+  <h2 style="text-align: center; color: white; margin-top: 60px">Sign<span style="color: #8332AC;">Up</span></h2>
 
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -25,10 +25,11 @@
     <%= f.input :password_confirmation, required: true %>
   </div>
 
-  <div class="form-actions">
+  <div class="form-actions" style="text-align: center">
 
     <%= f.button :submit, "Sign up" %>
 
+  </div>
   </div>
 <% end %>
 <% end %>
