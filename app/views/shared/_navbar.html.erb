@@ -6,7 +6,7 @@
     <% end %>
   </div>
   <div class="navbar-wagon-upload">
-    <%= link_to user_videos_new_path, class: "navbar-wagon-item" do %>
+    <%= link_to videos_new_path, class: "navbar-wagon-item" do %>
     <i class="far fa-stop-circle"></i>
     <% end %>
   </div>
@@ -17,10 +17,10 @@
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
           <% if user_signed_in? %>
-          <li><%= link_to('Dashboard', user_videos_new_path) %></li>
+          <li><%= link_to('Dashboard', videos_show_path) %></li>
           <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
           <% else %>
-           <li><%= link_to('Dashboard', user_videos_new_path) %></li>
+           <li><%= link_to('Dashboard', videos_show_path) %></li>
            <% end %>
         </ul>
       </div>

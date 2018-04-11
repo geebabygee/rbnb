@@ -3,13 +3,6 @@ Rails.application.routes.draw do
     root to: 'events#index', as: :authenticated_root
   end
   devise_for :users
-  get 'user_videos/index'
-
-  get 'user_videos/new'
-
-  get 'user_videos/create'
-
-  get 'user_videos/destroy'
 
   get 'likes/new'
 
@@ -30,6 +23,10 @@ Rails.application.routes.draw do
   get 'events/index'
 
   get 'events/show'
+
+  get 'events/new'
+
+  get 'events/create'
 
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
