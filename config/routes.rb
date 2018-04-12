@@ -35,7 +35,7 @@ Rails.application.routes.draw do
  # devise_for :users,
  #    controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  resources :events, only: [ :index, :show ] do
+  resources :events, only: [ :index, :show, :new, :create, :edit, :update ] do
     resources :likes, only: [:create, :destroy]
     resources :videos, only:  [ :index, :show, :new, :create, :destroy]
     resources :user_videos, only: [ :index, :new, :create, :destroy]
