@@ -1,0 +1,21 @@
+<div class="container">
+
+<h2 style="text-align: center; color: white; margin-top: 50px">Add<span style="color: #8332AC;">Event</span></h2>
+
+ <%= simple_form_for @event do |f| %>
+  <div class="form-inputs" style="width: 33%; text-align: center; margin-left: 33%">
+
+    <%= f.input :title, placeholder:"title"%>
+    <%= f.input :address, placeholder:"address"%>
+    <%= f.input :description, placeholder:"description"%>
+    <%= f.input :price, placeholder:"price"%>
+
+  </div>
+  <div class="form-actions" style="text-align: center;">
+
+    <%= f.button :submit, "Add Event" %>
+
+ <% end %>
+  </div>
+
+</div>
